@@ -2,9 +2,6 @@
 // Created by woesss on 01.08.2023.
 //
 
-#define TSF_IMPLEMENTATION
-#define TML_IMPLEMENTATION
-
 #include "tsf_player.h"
 #include "util/log.h"
 
