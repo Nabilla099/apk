@@ -5,8 +5,11 @@
 #ifndef MMAPI_TSF_PLAYER_H
 #define MMAPI_TSF_PLAYER_H
 
-#include "tsf.h"
-#include "tml.h"
+#define TSF_IMPLEMENTATION
+#define TML_IMPLEMENTATION
+
+#include "TinySoundFont/tsf.h"
+#include "TinySoundFont/tml.h"
 #include "mmapi/PlayerListener.h"
 #include "mmapi/BasePlayer.h"
 #include "util/jbytearray.h"
