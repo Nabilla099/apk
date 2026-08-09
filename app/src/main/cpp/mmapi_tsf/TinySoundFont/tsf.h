@@ -11,8 +11,9 @@ https://github.com/scamtank/TinySoundFont
 extern "C" {
 #endif
 
+#include "tml.h"
+
 typedef struct tsf tsf;
-typedef struct tml_message tml_message;
 
 #ifndef TSF_NO_STDIO
 #include <stdio.h>
@@ -23,7 +24,9 @@ tsf* tsf_load_filename(const char* filename);
 tsf* tsf_load_file(FILE* f);
 #endif
 tsf* tsf_load_memory(const void* buffer, int size);
+tsf* tsf_copy(tsf* f);
 void tsf_free(tsf* f);
+void tsf_close(tsf* f);
 
 int tsf_get_presetcount(tsf* f);
 const char* tsf_get_presetname(tsf* f, int preset);
@@ -34,13 +37,16 @@ void tsf_note_off(tsf* f, int preset, int key);
 void tsf_note_off_all(tsf* f);
 void tsf_render_short(tsf* f, short* outputBuffer, int numSamples, int flag);
 void tsf_render_float(tsf* f, float* outputBuffer, int numSamples, int flag);
+void tsf_reset(tsf* f);
 
+void tsf_channel_set_bank_preset(tsf* f, int channel, int bank, int preset);
 void tsf_channel_set_presetnumber(tsf* f, int channel, int preset, int midipreset);
 void tsf_channel_midi_control(tsf* f, int channel, int controller, int control);
 void tsf_channel_note_on(tsf* f, int channel, int key, float vel);
 void tsf_channel_note_off(tsf* f, int channel, int key);
 void tsf_channel_note_off_all(tsf* f, int channel);
 void tsf_channel_sounds_off_all(tsf* f, int channel);
+void tsf_channel_set_pitchwheel(tsf* f, int channel, int pitch);
 
 int tsf_get_channel_presetindex(tsf* f, int channel);
 void tsf_set_volume(tsf* f, float gaindb);
