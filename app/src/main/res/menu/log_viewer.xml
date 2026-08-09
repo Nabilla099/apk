@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_log_share"
+        android:title="@string/log_share"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_log_clear"
+        android:title="@string/log_clear" />
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Kh-Loader dark theme colors (modern minimalist)-->
+    <color name="primary">#15181D</color>
+    <color name="primary_dark">#0E1013</color>
+    <color name="accent">#7C5CFC</color>
+    <color name="background">#0B0C0F</color>
+    <color name="text_primary">#F5F5F7</color>
+    <color name="text_secondary">#B7B9C2</color>
+    <color name="btn_bg_normal">#7C5CFC</color>
+    <color name="btn_bg_pressed">#5B3FE0</color>
+    <color name="config_card">#1B1F26</color>
+
+    <color name="nnf_separator_color">@color/nnf_dark_separator_color</color>
+</resources>
