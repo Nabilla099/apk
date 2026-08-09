@@ -31,6 +31,7 @@ tml_message* tml_load_file(FILE* f);
 #endif
 tml_message* tml_load_memory(const void* buffer, int size);
 void tml_free(tml_message* m);
+void tml_get_info(tml_message* m, int* out_used, int* out_instrumentcount, const char** out_copyright, const char** out_comment, unsigned int* out_millisecond);
 
 #ifdef __cplusplus
 }
